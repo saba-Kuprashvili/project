@@ -1,0 +1,466 @@
+<!DOCTYPE html>
+<html lang="ka">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ძირითადი ინფორმაცია</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+    <style>
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+header {
+    width: 100%;
+    background-color: #ff6600;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+}
+
+.header-top {
+    background-color: #ff6600;
+    height: 47px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.header-top .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.header-top .social-icons {
+    width: 300px;
+    display: flex;
+    align-items: center;
+}
+
+.header-top .social-icons a {
+    margin-right: 10px;
+}
+
+.header-top .social-icons a img {
+    width: 31px;
+    height: 31px;
+}
+
+.header-top .main-content {
+    display: flex;
+    align-items: center;
+    width: 900px;
+}
+
+.header-top .language-switcher {
+    margin-right: auto;
+    color: white;
+}
+
+.header-top .language-switcher a {
+    display: inline;
+    text-decoration: none;
+    color: white;
+    margin: 0 5px;
+}
+
+.header-top .contact-info a,
+.header-top .authorization a,
+.header-top .registration a {
+    color: white;
+    text-decoration: none;
+    font-size: 16px;
+}
+
+.header-top .contact-info .material-symbols-outlined {
+    margin: 3px;
+    font-size: 15px;
+}
+
+.header-top .contact-info a {
+    margin-right: 30px;
+}
+
+.header-top .authorization .material-symbols-outlined {
+    margin: 3px;
+    font-size: 17px;
+}
+
+.header-top .registration a::before {
+    content: "|";
+    margin: 0 10px;
+}
+
+.header-middle-wrapper {
+    background-color: white;
+}
+
+.header-middle {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 120px;
+}
+
+.header-middle .logo img {
+    height: 90px;
+    width: auto;
+}
+
+.header-middle .search-bar {
+    display: flex;
+    align-items: center;
+    margin-right: 25px;
+}
+
+.header-middle .search-bar input {
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 5px 0 0 5px;
+    width: 550px;
+    height: 18px;
+}
+
+.header-middle .search-bar button {
+    border: none;
+    background-color: #ff6600;
+    color: white;
+    cursor: pointer;
+    border-radius: 0 5px 5px 0;
+    height: 44px;
+}
+
+.header-middle .search-bar .material-symbols-outlined {
+    margin-left: 8px;
+    margin-top: 5px;
+}
+
+.header-middle .cart {
+    display: flex;
+    align-items: center;
+    border: 1px solid #aaa;
+    border-radius: 5px;
+    padding: 5px 10px;
+}
+
+.header-middle .cart span {
+    font-size: 20px;
+    margin-right: 10px;
+    border-right: 1px solid #aaa;
+    padding-right: 10px;
+}
+
+.header-middle .cart a {
+    color: black;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.header-bottom {
+    background-color: #ff6600;
+}
+
+.header-bottom nav {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 50px;
+}
+
+.header-bottom nav a {
+    color: white;
+    text-decoration: none;
+    margin: 0 20px;
+    font-weight: bold;
+}
+
+.header-bottom nav a:not(:last-child) {
+    margin-right: 25px;
+}
+
+.containr {
+    width: 1200px;
+    padding: 15px;
+    margin: 0 0 50px 380px;
+}
+
+.breadcrumb {
+    margin-bottom: 30px;
+    font-size: 14px;
+    display: flex;
+}
+
+.breadcrumb a {
+    text-decoration: none;
+    color: #EC5E00;
+}
+
+.breadcrumb span {
+    margin: 10px 3px;
+    font-size: 16px;
+    color: #878787;
+}
+
+.div1 {
+    display: flex;
+    align-items: center;
+}
+
+.div1 img {
+    width: 620px;
+    height: 245px;
+    margin-right: 20px;
+}
+
+.div1-text h2 {
+    font-size: 25px;
+    color: #878787;
+}
+
+.div1-text p {
+    font-size: 14px;
+    line-height: 1.8;
+    margin-bottom: 30px;
+}
+
+.div2 {
+    margin-top: 20px;
+}
+
+.div2 p {
+    line-height: 1.7;
+    font-size: 14.5px;
+}
+
+footer {
+    background-color: #ff6600;
+    color: white;
+    width: 100%;
+    height: 443px;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    position: relative;
+    margin-top: auto;
+    overflow: hidden;
+}
+
+.footer-container {
+    width: 100%;
+    max-width: 1200px;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    padding-top: 50px;
+}
+
+.footer-section {
+    padding: 0px 15px;
+}
+
+.pages {
+    width: 350px;
+    height: 254.8px;
+}
+
+.services {
+    width: 350px;
+    height: 184.8px;
+}
+
+h3 {
+    margin: 0 0 26px 0;
+    font-size: 20px;
+}
+
+footer p, a {
+    margin: 0;
+    font-size: 16px;
+    line-height: 2.2;
+    text-decoration: none;
+    color: white;
+    display: flex;
+    align-items: center;
+}
+
+.footer-section.contact-info {
+    width: 370px;
+}
+
+.footer-section.contact-info span {
+    font-size: 26px;
+    margin-right: 12px;
+    line-height: 1.9;
+}
+
+.footer-section.contact-info h3 {
+    margin: 0 0 22px 3px;
+}
+
+.footer-section.contact-info p {
+    font-size: 15px;
+}
+
+.footer-section.pages {
+    margin-left: 130px;
+}
+
+.material-symbols-outlined {
+    font-size: 20px;
+    margin-right: 10px;
+}
+
+.footer-bottom {
+    position: absolute;
+    bottom: 40px;
+    left: 375px;
+    display: flex;
+    align-items: center;
+}
+
+.footer-bottom p {
+    font-size: 14px;
+    margin-right: 35px;
+}
+
+.footer-bottom img {
+    width: 88px;
+    height: 31px;
+}
+
+    </style>
+</head>
+<body>
+    <header>
+        <div class="header-top">
+            <div class="container">
+                <div class="social-icons">
+                    <a href="https://www.facebook.com/Autopia.GE">
+                        <img src="png/facebook.png" alt="Facebook">
+                    </a>
+                    <a href="https://twitter.com/Autopia">
+                        <img src="png/twitter.png" alt="Twitter">
+                    </a>
+                    <a href="https://www.instagram.com/autopia.ge/">
+                        <img src="png/instagram.png" alt="Instagram">
+                    </a>
+                    <a href="https://www.youtube.com/channel/UChF1r1xrMy6aldFmMZ0aSKA">
+                        <img src="png/youtube.png" alt="YouTube">
+                    </a>
+                </div>
+                <div class="main-content">
+                    <div class="language-switcher">
+                        <a href="#">GEO</a> | <a href="#">ENG</a>
+                    </div>                    
+                    <div class="contact-info">
+                        <a href="#"><span class="material-symbols-outlined">call</span> 0322 233 133</a>
+                    </div>
+                    <div class="authorization">
+                        <a href="authorization.html"><span class="material-symbols-outlined">lock</span>ავტორიზაცია</a>
+                    </div>
+                    <div class="registration">
+                        <a href="registration.html">რეგისტრაცია</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="header-middle-wrapper">
+            <div class="container header-middle">
+                <div class="logo">
+                    <a href="main.html">
+                        <img src="https://autopia.ge/assets/images/logo_org.jpg" alt="Autopia">
+                    </a>
+                </div>
+                <div class="search-bar">
+                    <input type="text" placeholder="ძებნა">
+                    <button><span class="material-symbols-outlined">search</span></button>
+                </div>
+                <div class="cart">
+                    <span>🛒</span>
+                    <a>კალათა 0.00ლ</a>
+                </div>
+            </div>
+        </div>
+        <div class="header-bottom">
+            <nav>
+                <a href="main.html">მთავარი</a>
+                <a href="mainInfo.html">ძირითადი ინფორმაცია</a>
+                <a href="news.html">სიახლეები</a>
+                <a href="vacancies.html">ვაკანსიები</a>
+                <a href="contact.html">კონტაქტი</a>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <div class="containr">
+            <div class="breadcrumb">
+                <a href="#"><span class="material-symbols-outlined">house</span></a>
+                <span class="material-symbols-outlined breadcrumb-separator">chevron_right</span>
+                <a href="#">ძირითადი ინფორმაცია</a>
+            </div>
+            <div class="div1">
+                <img src="https://autopia.ge/assets/images/caf68eae95b2694faa3afbd90357a36d.png" alt="Image">
+                <div class="div1-text">
+                    <h2><i>ჩვენ შესახებ</i></h2>
+                    <p><strong>„აუტოპია”</strong> -მ   საქმიანობა დაიწყო 2010 წლიდან, როგორც იტალიური კომპანიების <strong>PRASCO, RHIBO, MAXICAR</strong>-ის წარმომადგენელმა  საქართველოში. პირველივე დღიდან, კომპანიის პრიორიტეტი გახდა ქართულ ბაზარზე ხარისხიანი, სერთიფიცირებული პროდუქციის მოწოდება. კონცეფციის ერთგულების და სწორი პოზიციონირების წყალობით, მალევე წარმატებით ავითვისეთ აღნიშნული სეგმენტი . შესაბამისად, 2013 წლიდან დავიწყეთ ასორტიმენტის და სერვისების მნიშვნელოვანი გაზრდა.</p>
+                </div>
+            </div>
+            <div class="div2">
+                <p>ჩვენი პარტნიორების რიგებს შეემატნენ დარგის ლიდერები: <strong>GBG</strong> (საბერძნეთი) <strong>TONG YANG</strong> (ტაივანი)  <strong>DEPO</strong>(ტაივანი)  <strong>TYC</strong> (ტაივანი) .</p>
+                <p>2014 წელს იხნსება ელიავას ფილიალი,ხოლო  2016 წელს დიღმის ფილიალი.მომდევნო პერიოდში, გამორჩეულად მნიშვნელოვანი იყო 2017 წელი, როცა თანამშრომლობა დავიწყეთ  საქარე მინების მწარმოებელ გიგანტთან <strong>XYG-თან</strong> და იმავე  წლიდან  ვართ ამ კომპანიის ლიდერი დისტრიბუტორი რეგიოში.</p>
+                <p>2017 წელს  გავხდით ავტო ოპტიკის მწარმოებელი კომპანიის  <strong>TYC</strong> -ის ექსკლუზიური წარმომადგენელი საქართველოში. 2018 წელს უკვე ფუნქციონირებას იწყებს ქუთაისის ფილიალი, ასევე საწყობი და ფილიალი კახეთის გზატკეცილზე.  2019 წელს კი გავხსენით ფილიალი ბათუმში. 2020 წელს გაიხსნა თანამედროვე ტექნოლოგიებით აღჭურვილი  <strong>1700 კვ.მ</strong> ფართის ავტოსერვისი კახეთის გზატკეცილზე.</p>
+                <p>ჩვენი მთავარი მიზანი - ვიყოთ მომხმარებლის საჭიროებაზე ორიენტირებული, არის ჩვენი წარმატების მთავარი გასაღები. დღეის მდგომარეობით, ჩვენ ვახდენთ 8000-ზე მეტი დასახელების ავტონაწილის რეალიზაციას <strong>14 000 000 ლარის</strong> წლიური ბრუნვით. პროდუქციას ვყიდით ჩვენს მეზობელ ქვეყნებშიც. საქართველოს მასშტაბით მოქმედებს მაღაზიის ხუთი ფილიალი და ავტოსერვისი. აუტოპიაში დასაქმებულია <strong>60-ზე</strong> მეტი კოსულტანტი,ავტოექსპერტი,მენეჯერი,სერვისის სპეციალისტი. ფილიალების და საწყობების საერთო ფართი კი <strong>4700 კვ.მ-ია.</strong></p>
+                <br>
+                <p>დღეის მდგომარეობით ჩვენი ექსკლუზიური მომწოდებლები და პარტიორორები არიან ავტონაწილების ინდუსტრიის მსოფლიო ლიდერები: <strong>PRASCO</strong>(იტალია), <strong>MAXICAR</strong> (იტალია) , <strong>RHIBO</strong> (იტალია), <strong>GBG</strong> (საბერძნეთი) , <strong>TONG YANG</strong> (ტაივანი), <strong>TYC</strong> (ტაივანი), <strong>XYG</strong> (ჩინეთი), <strong>ISAM</strong>(იტალია), <strong>OSRAM</strong>(გერმანია). ჯამში ვახდენთ 100- მდე ბრენდის პროდუქციის რეალიზაციას. სიამაყით გვინდა ღვნიშნოთ, რომ სარეალიზაციო პროდუქციის 95% -ს გააჩნია ხარსხის ევროპული და ამერიკული სერთიფიკატები <strong>TUV, THATCHAM, CAPA,  NSF.</strong>  ჩვენი საქმიანობა არ შემოიფარგლება მხოლოდ ავტონაწილების რეალიზაციით, ჩვენ მომხმარებლებს ვთავაზობთ მრავალფეროვან და კვალიფიციურ სერვისს ავტომანქანის ნებისმიერი ტიპის გაუმართაობისთვის.</p>
+                <p><strong>სათუნუქე , სამღებრო , საქარე მინის, სავალი ნაწილის, ძრავის, ელექტროობის</strong> მაღალკვალიფიციური სპეციალისტები მოთხოვნის ყველაზე მაღალ სტანდარტებს აკმაყოფილებენ. ჩვენი თამასა დარგის უმაღლესი ნიშაა, მიზანი კი ყოველდღიური განვითარება.</p>
+                <p><strong>„აუტოპია“ გისურვებთ მშვიდობიან მგზავრობას!</strong></p>
+            </div>
+        </div>
+    </main>
+
+
+    <footer>
+        <div class="footer-container">
+            <div class="footer-section contact-info">
+                <h3>საკონტაქტო ინფორმაცია</h3>
+                <p><span class="material-symbols-outlined">location_on</span> საქართველო, თბილისი, ბალანჩინის N18</p>
+                <p><span class="material-symbols-outlined">call</span> 0322 233 133</p>
+                <p><span class="material-symbols-outlined">mail</span> autopia@autopia.ge</p>
+                <p><span class="material-symbols-outlined">schedule</span> ორშ-კვირა 10:00-18:30</p>
+            </div>
+            <div class="footer-section pages">
+                <h3>გვერდები</h3>
+                <p><a href="main.html">მთავარი</a></p>
+                <p><a href="mainInfo.html">ძირითადი ინფორმაცია</a></p>
+                <p><a href="news.html">სიახლეები</a></p>
+                <p><a href="vacancies.html">ვაკანსიები</a></p>
+                <p><a href="contact.html">კონტაქტი</a></p>
+            </div>
+            <div class="footer-section services">
+                <h3>სერვისები</h3>
+                <p><a href="#">წესები და პირობები</a></p>
+                <p><a href="#">მიწოდების პირობები</a></p>
+                <p><a href="#">კონფიდენციალურობის პოლიტიკა</a></p>
+                <p><a href="#">უკან დაბრუნება</a></p>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>Autopia © 2024</p>
+            <a href="https://www.top.ge/index.php?h=86709#86709" target="_blank">
+                <img src="png/TOP.GE.png" alt="Top.ge">
+            </a>
+        </div>
+    </footer>
+</body>
+</html>

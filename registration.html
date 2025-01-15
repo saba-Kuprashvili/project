@@ -1,0 +1,554 @@
+<!DOCTYPE html>
+<html lang="ka">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>რეგისტრაცია</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+    <style>
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+header {
+    width: 100%;
+    background-color: #ff6600;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+}
+
+.header-top {
+    background-color: #ff6600;
+    height: 47px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.header-top .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.header-top .social-icons {
+    width: 300px;
+    display: flex;
+    align-items: center;
+}
+
+.header-top .social-icons a {
+    margin-right: 10px;
+}
+
+.header-top .social-icons a img {
+    width: 31px;
+    height: 31px;
+}
+
+.header-top .main-content {
+    display: flex;
+    align-items: center;
+    width: 900px;
+}
+
+.header-top .language-switcher {
+    margin-right: auto;
+    color: white;
+}
+
+.header-top .language-switcher a {
+    display: inline;
+    text-decoration: none;
+    color: white;
+    margin: 0 5px;
+}
+
+.header-top .contact-info a,
+.header-top .authorization a,
+.header-top .registration a {
+    color: white;
+    text-decoration: none;
+    font-size: 16px;
+}
+
+.header-top .contact-info .material-symbols-outlined{
+    margin: 3px;
+    font-size: 15px;
+}
+
+.header-top .contact-info a {
+    margin-right: 30px;
+}
+
+.header-top .authorization .material-symbols-outlined{
+    margin: 3px;
+    font-size: 17px;
+}
+
+.header-top .registration a::before {
+    content: "|";
+    margin: 0 10px;
+}
+
+.header-middle-wrapper {
+    background-color: white;
+}
+
+.header-middle {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 120px;
+}
+
+.header-middle .logo img {
+    height: 90px;
+    width: auto;
+}
+
+.header-middle .search-bar {
+    display: flex;
+    align-items: center;
+    margin-right: 25px;
+}
+
+.header-middle .search-bar input {
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 5px 0 0 5px;
+    width: 550px;
+    height: 18px;
+}
+
+.header-middle .search-bar button {
+    border: none;
+    background-color: #ff6600;
+    color: white;
+    cursor: pointer;
+    border-radius: 0 5px 5px 0;
+    height: 44px;
+}
+
+.header-middle .search-bar .material-symbols-outlined {
+    margin-left: 8px;
+    margin-top: 5px;
+}
+
+.header-middle .cart {
+    display: flex;
+    align-items: center;
+    border: 1px solid #aaa;
+    border-radius: 5px;
+    padding: 5px 10px;
+}
+
+.header-middle .cart span {
+    font-size: 20px;
+    margin-right: 10px;
+    border-right: 1px solid #aaa;
+    padding-right: 10px;
+}
+
+.header-middle .cart a {
+    color: black;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.header-bottom {
+    background-color: #ff6600;
+}
+
+.header-bottom nav {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 50px;
+}
+
+.header-bottom nav a {
+    color: white;
+    text-decoration: none;
+    margin: 0 20px;
+    font-weight: bold;
+}
+
+.header-bottom nav a:not(:last-child) {
+    margin-right: 25px;
+}
+
+main {
+    width: 1200px;
+    margin: 0 auto;
+}
+
+.breadcrumb {
+    display: flex;
+    align-items: center;
+    margin: 20px 0;
+    font-size: 16px;
+    color: #333;
+    margin-left: 25px;
+}
+
+.breadcrumb .material-symbols-outlined {
+    font-size: 18px;
+    vertical-align: middle;
+    margin-right: 8px;
+    color: #878787;
+}
+
+.breadcrumb a {
+    color: #EC5E00;
+    font-size: 14px;
+    text-decoration: none;
+}
+
+.breadcrumb .breadcrumb-separator {
+    font-size: 14px;
+    margin: 0;
+    margin-right: 5px;
+    color: #333;
+    display: inline-flex;
+    align-items: center;
+}
+
+h2 {
+    font-size: 23px;
+    color: #878787da;
+    margin: 0;
+    padding-left: 26px;
+    margin-top: 40px;
+}
+
+fieldset {
+    width: 1170px;
+    margin: 15px 15px 100px;
+    border: none;
+    padding: 0;
+}
+
+legend {
+    font-size: 18px;
+    color: #333;
+    margin: 0;
+    padding-left: 15px;
+}
+
+.separator {
+    width: 1170px;
+    height: 1px;
+    background-color: #eed0d0;
+    border: none;
+    margin: 10px 0 23px;
+    margin-left: 13px;
+}
+
+.form-row {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+label {
+    width: 200px;
+    height: 34px;
+    line-height: 34px;
+    text-align: right;
+    font-size: 14px;
+    color: #878787;
+    margin-right: 15px;
+}
+
+input {
+    width: 958px;
+    height: 25px;
+    font-size: 14px;
+    padding: 5px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+input::placeholder {
+    font-size: 13px;
+    color: #878787;
+    text-indent: 7px;
+}
+
+input[placeholder="პაროლის დადასტურება"] { 
+    margin-top: 4px; 
+}
+
+fieldset button {
+    width: 126px;
+    height: 32px;
+    font-size: 15px;
+    color: #fff;
+    background-color: #EC5E00;
+    border: none;
+    cursor: pointer;
+    margin-top: 10px;
+    float: right;
+}
+
+footer {
+    background-color: #ff6600;
+    color: white;
+    width: 100%;
+    height: 443px;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    position: relative;
+    margin-top: auto;
+    overflow: hidden;
+}
+
+.footer-container {
+    width: 100%;
+    max-width: 1200px;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    padding-top: 50px;
+}
+
+.footer-section {
+    padding: 0px 15px;
+}
+
+.pages {
+    width: 350px;
+    height: 254.8px;
+}
+
+.services {
+    width: 350px;
+    height: 184.8px;
+}
+
+h3 {
+    margin: 0 0 26px 0;
+    font-size: 20px;
+}
+
+p, a {
+    margin: 0;
+    font-size: 16px;
+    line-height: 2.2;
+    text-decoration: none;
+    color: white;
+    display: flex;
+    align-items: center;
+}
+
+.footer-section.contact-info {
+    width: 370px;
+}
+
+.footer-section.contact-info span {
+    font-size: 26px;
+    margin-right: 12px;
+    line-height: 1.9;
+}
+
+.footer-section.contact-info h3 {
+    margin: 0 0 22px 3px;
+}
+
+.footer-section.contact-info p {
+    font-size: 15px;
+}
+
+.footer-section.pages {
+    margin-left: 130px;
+}
+
+.material-symbols-outlined {
+    font-size: 20px;
+    margin-right: 10px;
+}
+
+.footer-bottom {
+    position: absolute;
+    bottom: 40px;
+    left: 375px;
+    display: flex;
+    align-items: center;
+}
+
+.footer-bottom p {
+    font-size: 14px;
+    margin-right: 35px;
+}
+
+.footer-bottom img {
+    width: 88px;
+    height: 31px;
+}
+    </style>
+</head>
+<body>
+    <header>
+        <div class="header-top">
+            <div class="container">
+                <div class="social-icons">
+                    <a href="https://www.facebook.com/Autopia.GE">
+                        <img src="png/facebook.png" alt="Facebook">
+                    </a>
+                    <a href="https://twitter.com/Autopia">
+                        <img src="png/twitter.png" alt="Twitter">
+                    </a>
+                    <a href="https://www.instagram.com/autopia.ge/">
+                        <img src="png/instagram.png" alt="Instagram">
+                    </a>
+                    <a href="https://www.youtube.com/channel/UChF1r1xrMy6aldFmMZ0aSKA">
+                        <img src="png/youtube.png" alt="YouTube">
+                    </a>
+                </div>
+                <div class="main-content">
+                    <div class="language-switcher">
+                        <a href="#">GEO</a> | <a href="#">ENG</a>
+                    </div>                    
+                    <div class="contact-info">
+                        <a href="#"><span class="material-symbols-outlined">call</span> 0322 233 133</a>
+                    </div>
+                    <div class="authorization">
+                        <a href="authorization.html"><span class="material-symbols-outlined">lock</span>ავტორიზაცია</a>
+                    </div>
+                    <div class="registration">
+                        <a href="registration.html">რეგისტრაცია</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="header-middle-wrapper">
+            <div class="container header-middle">
+                <div class="logo">
+                    <a href="main.html">
+                        <img src="https://autopia.ge/assets/images/logo_org.jpg" alt="Autopia">
+                    </a>
+                </div>
+                <div class="search-bar">
+                    <input type="text" placeholder="ძებნა">
+                    <button><span class="material-symbols-outlined">search</span></button>
+                </div>
+                <div class="cart">
+                    <span>🛒</span>
+                    <a>კალათა 0.00ლ</a>
+                </div>
+            </div>
+        </div>
+        <div class="header-bottom">
+            <nav>
+                <a href="main.html">მთავარი</a>
+                <a href="mainInfo.html">ძირითადი ინფორმაცია</a>
+                <a href="news.html">სიახლეები</a>
+                <a href="vacancies.html">ვაკანსიები</a>
+                <a href="contact.html">კონტაქტი</a>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <div class="breadcrumb">
+          <a href="#"><span class="material-symbols-outlined">house</span></a>
+          <span class="material-symbols-outlined breadcrumb-separator">chevron_right</span>
+          <a href="#">რეგისტრაცია</a>
+        </div>
+      
+        <h2>რეგისტრაცია</h2>
+      
+        <fieldset>
+          <legend>შეიყვანეთ თქვენი ინფორმაცია</legend>
+          <hr class="separator">
+        
+          <!-- Labels and inputs -->
+          <div class="form-row">
+            <label>* სახელი</label>
+            <input type="text" placeholder="სახელი" required>
+          </div>
+          <div class="form-row">
+            <label>* გვარი</label>
+            <input type="text" placeholder="გვარი" required>
+          </div>
+          <div class="form-row">
+            <label>* ელ-ფოსტა</label>
+            <input type="text" placeholder="ელ-ფოსტა" required>
+          </div>
+          <div class="form-row">
+            <label>* ტელეფონი</label>
+            <input type="text" placeholder="ტელეფონი" required>
+          </div>
+          <div class="form-row">
+            <label>* ქვეყანა</label>
+            <input type="text" placeholder="ქვეყანა" required>
+          </div>
+          <div class="form-row">
+            <label>* ქალაქი</label>
+            <input type="text" placeholder="ქალაქი" required>
+          </div>
+          <div class="form-row">
+            <label>* რეგისტრაციის თარიღი</label>
+            <input type="date" placeholder="რეგისტრაციის თარიღი" required>
+          </div>
+          <div class="form-row">
+            <label>* პაროლი</label>
+            <input type="text" placeholder="პაროლი" required>
+          </div>
+          <div class="form-row">
+            <label>* პაროლის დადასტურება</label>
+            <input type="text" placeholder="პაროლის დადასტურება" required>
+          </div>
+        
+          <button id="click">რეგისტრაცია</button>
+        </fieldset>
+    </main>
+
+    <footer>
+        <div class="footer-container">
+            <div class="footer-section contact-info">
+                <h3>საკონტაქტო ინფორმაცია</h3>
+                <p><span class="material-symbols-outlined">location_on</span> საქართველო, თბილისი, ბალანჩინის N18</p>
+                <p><span class="material-symbols-outlined">call</span> 0322 233 133</p>
+                <p><span class="material-symbols-outlined">mail</span> autopia@autopia.ge</p>
+                <p><span class="material-symbols-outlined">schedule</span> ორშ-კვირა 10:00-18:30</p>
+            </div>
+            <div class="footer-section pages">
+                <h3>გვერდები</h3>
+                <p><a href="main.html">მთავარი</a></p>
+                <p><a href="mainInfo.html">ძირითადი ინფორმაცია</a></p>
+                <p><a href="news.html">სიახლეები</a></p>
+                <p><a href="vacancies.html">ვაკანსიები</a></p>
+                <p><a href="contact.html">კონტაქტი</a></p>
+            </div>
+            <div class="footer-section services">
+                <h3>სერვისები</h3>
+                <p><a href="#">წესები და პირობები</a></p>
+                <p><a href="#">მიწოდების პირობები</a></p>
+                <p><a href="#">კონფიდენციალურობის პოლიტიკა</a></p>
+                <p><a href="#">უკან დაბრუნება</a></p>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>Autopia © 2024</p>
+            <a href="https://www.top.ge/index.php?h=86709#86709" target="_blank">
+                <img src="png/TOP.GE.png" alt="Top.ge">
+            </a>
+        </div>
+    </footer>
+
+    <script src="registration.js"></script>
+</body>
+</html>
